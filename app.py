@@ -25,7 +25,7 @@ with open('scaler.pkl','rb') as file:
 
 
 ##streamlit app 
-st.title('Customer Chun Prediction')
+st.title('Customer Churn Prediction')
 
 #user input
 geography = st.selectbox('Geography', onehot_encoder_geo.categories_[0])
@@ -74,4 +74,5 @@ if prediction_prob>0.5:
     st.write('The customer is likely to churn')
 if prediction_prob<0.5:
     st.write('The customer is not likely to churn')
+
 
